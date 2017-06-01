@@ -10,30 +10,30 @@ AwesomeMenu is a menu with the same look as the story menu of [Path](https://pat
 
 
 Create the menu by setting up the menu items:
-
-	UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
-	UIImage *storyMenuItemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
-	UIImage *starImage = [UIImage imageNamed:@"icon-star.png"];
-    AwesomeMenuItem *starMenuItem1 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
-                                                               highlightedImage:storyMenuItemImagePressed
-                                                                   ContentImage:starImage
-                                                        highlightedContentImage:nil];
-	AwesomeMenuItem *starMenuItem2 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
-                                                               highlightedImage:storyMenuItemImagePressed
-                                                                   ContentImage:starImage
-                                                        highlightedContentImage:nil];
-	// the start item, similar to "add" button of Path
-	AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-addbutton.png"]
-                                                       highlightedImage:[UIImage imageNamed:@"bg-addbutton-highlighted.png"]
-                                                           ContentImage:[UIImage imageNamed:@"icon-plus.png"]
-                                                highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
-
+```Objective-c
+UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
+UIImage *storyMenuItemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
+UIImage *starImage = [UIImage imageNamed:@"icon-star.png"];
+AwesomeMenuItem *starMenuItem1 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
+						       highlightedImage:storyMenuItemImagePressed
+							   ContentImage:starImage
+						highlightedContentImage:nil];
+AwesomeMenuItem *starMenuItem2 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
+						       highlightedImage:storyMenuItemImagePressed
+							   ContentImage:starImage
+						highlightedContentImage:nil];
+// the start item, similar to "add" button of Path
+AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-addbutton.png"]
+					       highlightedImage:[UIImage imageNamed:@"bg-addbutton-highlighted.png"]
+						   ContentImage:[UIImage imageNamed:@"icon-plus.png"]
+					highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
+```
 Then, setup the menu and options:
-
-	AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.window.bounds startItem:startItem optionMenus:[NSArray arrayWithObjects:starMenuItem1, starMenuItem2]];
+```Objective-c
+AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.window.bounds startItem:startItem optionMenus:[NSArray arrayWithObjects:starMenuItem1, starMenuItem2]];
 	menu.delegate = self;
-	[self.window addSubview:menu];
-
+[self.window addSubview:menu];
+```
 You can also use menu options:
 
 to locate the center of "Add" button:
