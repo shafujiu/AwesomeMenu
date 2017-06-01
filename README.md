@@ -40,10 +40,10 @@ to locate the center of "Add" button:
 
 	menu.startPoint = CGPointMake(160.0, 240.0);
 
-to set the rotate angle:
+to set the rotate angle: 
 
 	menu.rotateAngle = 0.0;
-
+> 因为指定的item的起点或者终点位置都无法调整item，所以可以通过该属性旋转整个items的布局
 to set the whole menu angle:
 
 	menu.menuWholeAngle = M_PI * 2;
