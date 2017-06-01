@@ -1,39 +1,33 @@
-### DO NOT USE IT TO COPY PATH!
-
----
-
-AwesomeMenu is a menu with the same look as the story menu of [Path](https://path.com/).
-
----
+> 由于作者的Demo版本比较老了，所以已经无法正常运行，本文已经对此作了修改。可以直接运行看效果，并且也适当作了添加了一些注释。
 
 **How To**:
 
 
 Create the menu by setting up the menu items:
-```Objective-c
-UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
-UIImage *storyMenuItemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
-UIImage *starImage = [UIImage imageNamed:@"icon-star.png"];
-AwesomeMenuItem *starMenuItem1 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
-						       highlightedImage:storyMenuItemImagePressed
-							   ContentImage:starImage
-						highlightedContentImage:nil];
-AwesomeMenuItem *starMenuItem2 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
-						       highlightedImage:storyMenuItemImagePressed
-							   ContentImage:starImage
-						highlightedContentImage:nil];
+\`\`\`Objective-c
+UIImage \*storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
+UIImage \*storyMenuItemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
+UIImage \*starImage = [UIImage imageNamed:@"icon-star.png"];
+AwesomeMenuItem \*starMenuItem1 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
+	                           highlightedImage:storyMenuItemImagePressed
+	                           ContentImage:starImage
+	                    highlightedContentImage:nil];
+AwesomeMenuItem \*starMenuItem2 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
+	                           highlightedImage:storyMenuItemImagePressed
+	                           ContentImage:starImage
+	                    highlightedContentImage:nil];
 // the start item, similar to "add" button of Path
-AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-addbutton.png"]
-					       highlightedImage:[UIImage imageNamed:@"bg-addbutton-highlighted.png"]
-						   ContentImage:[UIImage imageNamed:@"icon-plus.png"]
-					highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
-```
+AwesomeMenuItem \*startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-addbutton.png"]
+	                       highlightedImage:[UIImage imageNamed:@"bg-addbutton-highlighted.png"]
+	                       ContentImage:[UIImage imageNamed:@"icon-plus.png"]
+	                highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
+\`\`\`
 Then, setup the menu and options:
-```Objective-c
-AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.window.bounds startItem:startItem optionMenus:[NSArray arrayWithObjects:starMenuItem1, starMenuItem2]];
+\`\`\`Objective-c
+AwesomeMenu \*menu = [[AwesomeMenu alloc] initWithFrame:self.window.bounds startItem:startItem optionMenus:[NSArray arrayWithObjects:starMenuItem1, starMenuItem2]];
 	menu.delegate = self;
 [self.window addSubview:menu];
-```
+\`\`\`
 You can also use menu options:
 
 to locate the center of "Add" button:
