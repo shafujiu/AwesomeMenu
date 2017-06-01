@@ -25,12 +25,13 @@
 @property (nonatomic, strong) UIImage *highlightedContentImage;
 
 @property (nonatomic, assign) CGFloat nearRadius;
+// to adjust the bounce animation:
 @property (nonatomic, assign) CGFloat endRadius;
 @property (nonatomic, assign) CGFloat farRadius;
-@property (nonatomic, assign) CGPoint startPoint;
-@property (nonatomic, assign) CGFloat timeOffset;
-@property (nonatomic, assign) CGFloat rotateAngle;
-@property (nonatomic, assign) CGFloat menuWholeAngle;
+@property (nonatomic, assign) CGPoint startPoint;   // menu的中心点的位置
+@property (nonatomic, assign) CGFloat timeOffset;   // to set the delay of every menu flying out animation:
+@property (nonatomic, assign) CGFloat rotateAngle;  // 整体旋转的角度
+@property (nonatomic, assign) CGFloat menuWholeAngle;  // 环绕的items的分布的角度
 @property (nonatomic, assign) CGFloat expandRotation;
 @property (nonatomic, assign) CGFloat closeRotation;
 @property (nonatomic, assign) CGFloat animationDuration;

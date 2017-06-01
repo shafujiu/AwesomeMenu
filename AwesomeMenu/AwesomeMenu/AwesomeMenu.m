@@ -347,7 +347,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     animationgroup.duration = animationDuration;
     animationgroup.fillMode = kCAFillModeForwards;
     animationgroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-    animationgroup.delegate = self;
+//    animationgroup.delegate = self;
     if(_flag == [self.menuItems count] - 1){
         [animationgroup setValue:@"firstAnimation" forKey:@"id"];
     }
@@ -394,7 +394,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     animationgroup.duration = animationDuration;
     animationgroup.fillMode = kCAFillModeForwards;
     animationgroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-    animationgroup.delegate = self;
+//    animationgroup.delegate = self;
     if(_flag == 0){
         [animationgroup setValue:@"lastAnimation" forKey:@"id"];
     }
